@@ -3,16 +3,24 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>stockHoldings</componentName>
-                <identifier>c_stockHoldings</identifier>
+                <componentName>stockHoldingMain</componentName>
+                <identifier>c_stockHoldingMain</identifier>
             </componentInstance>
         </itemInstances>
-        <name>main</name>
+        <name>region1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>region2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>region3</name>
         <type>Region</type>
     </flexiPageRegions>
     <masterLabel>Stock Holdings</masterLabel>
     <template>
-        <name>flexipage:defaultAppHomeTemplate</name>
+        <name>flexipage:appHomeTemplateHeaderTwoColumnsLeftSidebar</name>
     </template>
     <type>AppPage</type>
 </FlexiPage>

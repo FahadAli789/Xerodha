@@ -1,0 +1,28 @@
+<template>
+    <template lwc:if={showMenu}>
+        <lightning-card>
+            <div>
+                <div class="slds-p-around_medium slds-text-align_center">
+                    <h2 class="slds-text-title_bold">Xerodha IRR Calculator</h2>
+                    <p class="slds-p-around_medium">Upload all the files from Zerodha's Trade orders for each year this calculator can only calculate from Zerodha</p>
+                    <p class="slds-p-around_medium">Upload only csv files</p>
+                </div>
+                <br>
+                <span></span>
+                <c-csv-file-manager class="slds-align_absolute-center" ondataready={receiveData}></c-csv-file-manager>
+            </div>
+        </lightning-card>
+    </template>
+    <template lwc:else>
+        <lightning-card title="Current Holdings">
+            <lightning-card>
+                <lightning-datatable class="slds-text-body_small"
+                key-field="Name"
+                data={stockHoldingData}
+                columns={columns}
+                hide-checkbox-column 
+                ></lightning-datatable>
+            </lightning-card>
+        </lightning-card>
+    </template>
+</template>
